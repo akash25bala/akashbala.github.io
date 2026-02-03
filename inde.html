@@ -1,76 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Hey ❤️</title>
+  <title>Important Question 💘</title>
   <style>
     body {
-      background: linear-gradient(to right, #ff758c, #ff7eb3);
-      font-family: 'Arial', sans-serif;
-      text-align: center;
+      background: linear-gradient(to right, #ff4b5c, #ff9068);
+      font-family: Arial;
       color: white;
+      text-align: center;
       height: 100vh;
       display: flex;
-      align-items: center;
       justify-content: center;
-    }
-    .no.yes-mode {
-  background-color: #ff4b5c;
-  color: white;
-  transform: scale(1.1);
-  transition: all 0.3s ease;
-}
-    .card {
-      background: rgba(255, 255, 255, 0.15);
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    }
-    h1 {
-      font-size: 2.5rem;
+      align-items: center;
     }
     button {
-      margin: 15px;
       padding: 12px 25px;
       font-size: 18px;
       border: none;
       border-radius: 30px;
+      margin: 10px;
       cursor: pointer;
-    }
-    .yes {
-      background-color: #ff4b5c;
-      color: white;
-    }
-    .no {
-      background-color: white;
-      color: #ff4b5c;
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>Hey ❤️</h1>
-    <h2>Will you be my Valentine? 🌹</h2>
-    <button class="yes" onclick="yesClick()">YES 💕</button>
-    <button class="no" id="noBtn">NO 😢</button>
+  <div>
+    <h1>Will you be my Valentine? 💖</h1>
+
+    <button onclick="location.href='yes.html'">
+      YES 💕
+    </button>
+
+    <button onclick="location.href='no1.html'">
+      NO 😢
+    </button>
   </div>
-
-  <script>
-    function yesClick() {
-      document.body.innerHTML = `
-        <div style="text-align:center;color:white;">
-          <h1>YAYYYY!!! 💖💖💖</h1>
-          <h2>You just made me the happiest person 😍</h2>
-        </div>
-      `;
-    }
-    const noBtn = document.getElementById("noBtn");
-
-noBtn.addEventListener("mouseover", () => {
-  noBtn.innerText = "YES 💖";
-  noBtn.classList.add("yes-mode");
-  noBtn.onclick = yesClick;
-});
-  </script>
 </body>
 </html>
