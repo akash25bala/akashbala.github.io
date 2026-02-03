@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Last Chance 🥲</title>
+  <style>
+    body {
+      background: #ff006e;
+      color: white;
+      font-family: Arial;
+      text-align: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>LAST CHANCE 🥲</h1>
+    <p>This is your final warning 😭</p>
+    <p>(I’ll be very sad otherwise)</p>
+
+    <button onclick="location.href='question.html'">
+      I changed my mind 💖
+    </button>
+    <button onclick="forceYes()">
+      Still NO 😶
+    </button>
+  </div>
+
+  <script>
+    function forceYes() {
+      alert("System override activated 😈");
+      location.href = 'yes.html';
+    }
+  </script>
+</body>
+</html>
