@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hey ❤️</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      color: white;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    h1 {
+      font-size: 2.5rem;
+    }
+    button {
+      margin: 15px;
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+    .yes {
+      background-color: #ff4b5c;
+      color: white;
+    }
+    .no {
+      background-color: white;
+      color: #ff4b5c;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Hey ❤️</h1>
+    <h2>Will you be my Valentine? 🌹</h2>
+    <button class="yes" onclick="yesClick()">YES 💕</button>
+    <button class="no" onclick="noClick()">NO 😢</button>
+  </div>
+
+  <script>
+    function yesClick() {
+      document.body.innerHTML = `
+        <div style="text-align:center;color:white;">
+          <h1>YAYYYY!!! 💖💖💖</h1>
+          <h2>You just made me the happiest person 😍</h2>
+        </div>
+      `;
+    }
+
+    function noClick() {
+      alert("Are you sure? 🥺 Try again 😄");
+    }
+  </script>
+</body>
+</html>
