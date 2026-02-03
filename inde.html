@@ -64,10 +64,13 @@
         </div>
       `;
     }
+    const noBtn = document.getElementById("noBtn");
 
-    function noClick() {
-      alert("Are you sure? 🥺 Try again 😄");
-    }
+noBtn.addEventListener("mouseover", () => {
+  noBtn.innerText = "YES 💖";
+  noBtn.classList.add("yes-mode");
+  noBtn.onclick = yesClick;
+});
   </script>
 </body>
 </html>
