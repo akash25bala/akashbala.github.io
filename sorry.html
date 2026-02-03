@@ -4,7 +4,7 @@
   <title>Last Chance 🥲</title>
   <style>
     body {
-      background: #ff006e;
+      background: black;
       color: white;
       font-family: Arial;
       text-align: center;
@@ -12,28 +12,64 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      color: #ff4b5c;
+      animation: glow 1.5s infinite alternate;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    #noBtn {
+      position: absolute;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px red; }
+      to { text-shadow: 0 0 25px red; }
     }
   </style>
 </head>
 <body>
   <div>
-    <h1>LAST CHANCE 🥲</h1>
-    <p>This is your final warning 😭</p>
-    <p>(I’ll be very sad otherwise)</p>
+    <h1>🚨 LAST CHANCE 🚨</h1>
+    <p>You are entering dangerous territory 🥲</p>
 
-    <button onclick="location.href='question.html'">
+    <button onclick="location.href='inde.html'">
       I changed my mind 💖
     </button>
-    <button onclick="forceYes()">
+
+    <button id="noBtn">
       Still NO 😶
     </button>
   </div>
 
   <script>
-    function forceYes() {
-      alert("System override activated 😈");
-      location.href = 'yes.html';
+    const noBtn = document.getElementById("noBtn");
+
+    function moveBtn() {
+      const x = Math.random() * (window.innerWidth - 140);
+      const y = Math.random() * (window.innerHeight - 80);
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
     }
+
+    noBtn.addEventListener("mouseover", moveBtn);
+    noBtn.addEventListener("touchstart", moveBtn);
+
+    setTimeout(() => {
+      alert("System override 😈 Valentine accepted");
+      location.href = "yes.html";
+    }, 8000);
   </script>
 </body>
 </html>
