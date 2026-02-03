@@ -4,7 +4,7 @@
   <title>Wait 🤨</title>
   <style>
     body {
-      background: #222;
+      background: radial-gradient(circle, #222, #000);
       color: white;
       font-family: Arial;
       text-align: center;
@@ -13,15 +13,37 @@
       justify-content: center;
       align-items: center;
     }
+
+    .box {
+      animation: shake 0.4s infinite alternate;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      border-radius: 25px;
+      border: none;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    @keyframes shake {
+      0% { transform: translateX(-5px); }
+      100% { transform: translateX(5px); }
+    }
   </style>
 </head>
 <body>
-  <div>
-    <h1>Are you sure? 🤨</h1>
-    <p>This choice cannot be undone 😌</p>
+  <div class="box">
+    <h1>⚠️ ARE YOU SURE? 🤨</h1>
+    <p>This decision is… suspicious 😐</p>
 
-    <button onclick="location.href='inde.html'">Go Back 😅</button>
-    <button onclick="location.href='heartbreak2.html'">Yes, I’m sure 😤</button>
+    <button onclick="location.href='question.html'">Go Back 😅</button>
+    <button onclick="location.href='heartbreak2.html'">Yes, continue 😤</button>
   </div>
 </body>
 </html>
