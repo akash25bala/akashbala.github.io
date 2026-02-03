@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Hmm 😏</title>
+  <title>Think Again 😏</title>
   <style>
     body {
-      background: #ffb703;
+      background: linear-gradient(135deg, #ffb703, #fb8500);
       font-family: Arial;
       text-align: center;
       height: 100vh;
@@ -12,15 +12,42 @@
       justify-content: center;
       align-items: center;
     }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      animation: pulse 1.5s infinite;
+    }
+
+    h1 {
+      color: #d62828;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      border-radius: 25px;
+      border: none;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
   </style>
 </head>
 <body>
-  <div>
-    <h1>Think again 😏</h1>
-    <p>I even added animations and effort 🥲</p>
+  <div class="card">
+    <h1>THINK AGAIN 😏</h1>
+    <p>I wrote all this code for you 🥲</p>
+    <p>That’s at least +10 effort points 💖</p>
 
-    <button onclick="location.href='inde.html'">Okay okay 😅</button>
-    <button onclick="location.href='sorry.html'">Still no 😐</button>
+    <button onclick="location.href='inde.html'">Okay sorry 😅</button>
+    <button onclick="location.href='sorry.html'">Still NO 😐</button>
   </div>
 </body>
 </html>
